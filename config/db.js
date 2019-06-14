@@ -4,6 +4,7 @@ const db = config.get("mongoURI");
 
 const connectDB = async () => {
   try {
+    mongoose.set("bufferCommands", false);
     await mongoose.connect(
       db,
       {
