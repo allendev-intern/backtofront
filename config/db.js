@@ -10,7 +10,8 @@ const connectDB = async () => {
       {
         // uri_decode_auth: true,
         useNewUrlParser: true,
-        useCreateIndex: true
+        useCreateIndex: true,
+        useFindAndModify: false
       },
       function(err, db) {}
     );
