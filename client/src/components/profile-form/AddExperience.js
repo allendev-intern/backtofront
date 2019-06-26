@@ -30,7 +30,13 @@ const AddExperience = ({ addExperience, history }) => {
         positions that you have had in the past
       </p>
       <small>* = required field</small>
-      <form className='form'>
+      <form
+        className='form'
+        onSubmit={e => {
+          e.preventDefault();
+          addExperience(formData, history);
+        }}
+      >
         <div className='form-group'>
           <input
             type='text'
@@ -81,7 +87,7 @@ const AddExperience = ({ addExperience, history }) => {
                 toggleDisabled(!toDateDisabled);
               }}
             />{" "}
-            Current Job
+            Current School
           </p>
         </div>
         <div className='form-group'>
