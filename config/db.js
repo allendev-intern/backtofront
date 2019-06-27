@@ -4,17 +4,12 @@ const db = config.get("mongoURI");
 
 const connectDB = async () => {
   try {
-    mongoose.set("bufferCommands", false);
-    await mongoose.connect(
-      db,
-      {
-        // uri_decode_auth: true,
-        useNewUrlParser: true,
-        useCreateIndex: true,
-        useFindAndModify: false
-      },
-      function(err, db) {}
-    );
+    await mongoose.connect(db, {
+      // uri_decode_auth: true,
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false
+    });
 
     console.log("MongoDB Connected...");
   } catch (err) {
