@@ -230,7 +230,7 @@ router.delete("/comment/:id/:comment_id", auth, async (req, res) => {
 
     // Check user
 
-    if (comment.user.toString() === req.user.id) {
+    if (comment.user.toString() !== req.user.id) {
       return res.status(401).json({ msg: "User not authorized" });
     }
 
