@@ -18,7 +18,6 @@ Build for production
 > cd client
 > npm run build
 
-# View the deployed app at: 
- ```
- https://tranquil-dusk-99466.herokuapp.com/
- ```
+View the deployed app at: 
+> https://tranquil-dusk-99466.herokuapp.com/
+
